@@ -1,4 +1,5 @@
 import tkinter as tk
+from PIL import ImageTk, Image
 
 window = tk.Tk()
 
@@ -17,8 +18,10 @@ ent_fourth = tk.Entry(text="Fourth coeficient")
 label.pack()
 ent_fourth.pack()
 
+
 def handle_keypress():
     print(ent_second.get(), ent_third.get(), ent_fourth.get())
+
 
 frame = tk.Frame(master=window, relief=tk.RAISED, borderwidth=5)
 frame.pack()
@@ -29,5 +32,9 @@ btn_submit = tk.Button(
     command=handle_keypress
 )
 btn_submit.pack()
+
+myimg = ImageTk.PhotoImage(Image.open('myimg.jpg'))
+label_image = tk.Label(image=myimg)
+label_image.pack()
 
 window.mainloop()
