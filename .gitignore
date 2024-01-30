@@ -1,1 +1,4 @@
 .idea
+runs
+__pycache__
+*.jpg

@@ -1,2 +1,6 @@
 tk
 pillow
+numpy
+discorpy
+imutils
+opencv-python
